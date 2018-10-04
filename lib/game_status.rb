@@ -17,10 +17,7 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.each do |combination|
-    win_index_1 = combination[0]
-    win_index_2 = combination[1]
-    win_index_3 = combination[2]
-    moves = [board[win_index_1], board[win_index_2], board[win_index_3]]
+    moves = [board[combination[0]], board[combination[1]], board[combination[2]]]
     if moves.all?{|move| (move == "X")} || moves.all?{|move| (move == "O")}
       return combination
     end
