@@ -32,8 +32,8 @@ def full?(board)
 end
 
 def draw?(board)
-  # Returns true if the board is full and no win exists
-  # returns true if the board is won and  full
-  # true if not won
+  # Returns if the board is full and no win exists, then true
+  # returns if the board is not won and not full, then false
+  # if won, then false
   return !(board.won?) || (board.won? || board.full?) || (board.full? && !(board.won?))
 end
