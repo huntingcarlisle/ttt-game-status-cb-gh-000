@@ -20,7 +20,7 @@ def won?(board)
     win_index_1 = win_combination[0]
     win_index_2 = win_combination[1]
     win_index_3 = win_combination[2]
-    moves = [board[win_index_1, win_index_2, win_index_3]]
+    moves = [board[win_index_1], board[win_index_2], board[win_index_3]]
     if moves.all?{|move| (move == "X" || move == "O")}
       return combination
     end
